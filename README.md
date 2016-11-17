@@ -1,6 +1,15 @@
 # Learn-React-Native-3-Redux
 A simple app to display titles and descriptions using redux to manage state. 
 
+    In this App. We set up a provider for facilitate communication from our react-native app and redux. Then, we design reducers to manage the 2 states of our application namely, the LibrayList and the SelectedItem. First, the simple LibraryReducer is used to import a JSON file and set its content to the props of the LibraryList component via the mapStateToProps function passed to the connect method which we imported from the react-redux library. Second, the SelectionReducer was implemented to accept actions to modify the state of our store. We pass the actions defined in actions/index as the second argument to the connect function which gives our ListItem component access to the actions in their props ( this.props.selectLibrary(id) ). Whenever the the action is called, our old friend mapStateToProps provides our ListItem with the new state, in our case, the description of the selected library. 
+
+    In addition to introducing redux, this app introduced some basic animation with LayoutAnimation
+
+
+
+
+NOTES:
+
 Reducers are called once on boot up to set an initial state.    
 
 // reducers are always called with the state as the first parameter
